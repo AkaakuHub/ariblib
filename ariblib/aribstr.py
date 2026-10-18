@@ -224,7 +224,7 @@ class AribString:
     def flush_jis_array(self):
         if len(self.jis_array) > 0:
             try:
-                uni = self.jis_array.decode('iso-2022-jp')
+                uni = self.jis_array.decode('iso-2022-jp-ext')
             except UnicodeDecodeError:
                 uni = 'UnicodeDecodeError'
             self.utf_buffer.write(uni)
